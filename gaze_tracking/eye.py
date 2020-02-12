@@ -5,8 +5,6 @@ from .pupil import Pupil
 
 
 class Eye(object):
-    LEFT_EYE_POINTS = [36, 37, 38, 39, 40, 41]
-    RIGHT_EYE_POINTS = [42, 43, 44, 45, 46, 47]
 
     def __init__(self, original_frame, landmarks, side, calibration):
         self.frame = None
@@ -62,9 +60,9 @@ class Eye(object):
 
     def _analyze(self, original_frame, landmarks, side, calibration):
         if side == 0:
-            points = self.LEFT_EYE_POINTS
+            points = [36, 37, 38, 39, 40, 41]
         elif side == 1:
-            points = self.RIGHT_EYE_POINTS
+            points = [42, 43, 44, 45, 46, 47]
         else:
             return
 

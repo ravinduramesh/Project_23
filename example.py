@@ -10,7 +10,6 @@ while True:
     gaze.refresh(frame)
 
     frame = gaze.annotated_frame()
-    text = ""
 
     if gaze.is_blinking():
         text = " Blinking"
